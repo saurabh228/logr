@@ -1,0 +1,19 @@
+{"timestamp":"2024-03-15T10:00:01.123Z","level":"info","msg":"service started","service":"api-gateway","version":"2.1.0","port":8080}
+{"timestamp":"2024-03-15T10:00:02.456Z","level":"debug","msg":"connecting to database","service":"user-service","host":"postgres-primary","db_port":5432}
+{"timestamp":"2024-03-15T10:00:03.789Z","level":"info","msg":"database connection established","service":"user-service","latency_ms":42,"pool_size":10}
+{"timestamp":"2024-03-15T10:00:04.012Z","level":"info","msg":"incoming request","service":"api-gateway","method":"POST","url":"/api/v1/payments","request_id":"req-abc-123","hier_path":"payment.txn.charge"}
+{"timestamp":"2024-03-15T10:00:04.100Z","level":"debug","msg":"validating payment payload","service":"payment-service","request_id":"req-abc-123","hier_path":"payment.txn.validate","amount":99.99,"currency":"USD"}
+{"timestamp":"2024-03-15T10:00:04.250Z","level":"info","msg":"charge initiated","service":"payment-service","request_id":"req-abc-123","hier_path":"payment.txn.charge","provider":"stripe","amount":99.99}
+{"timestamp":"2024-03-15T10:00:04.800Z","level":"warn","msg":"stripe response latency high","service":"payment-service","request_id":"req-abc-123","hier_path":"payment.txn.charge","latency_ms":550,"threshold_ms":500}
+{"timestamp":"2024-03-15T10:00:05.010Z","level":"info","msg":"charge successful","service":"payment-service","request_id":"req-abc-123","hier_path":"payment.txn.charge","charge_id":"ch_3OxJkL2eZvKYlo2C","amount":99.99}
+{"timestamp":"2024-03-15T10:00:05.100Z","level":"info","msg":"sending order confirmation email","service":"notification-service","request_id":"req-abc-123","recipient":"user@example.com","template":"order_confirm"}
+{"timestamp":"2024-03-15T10:00:05.200Z","level":"info","msg":"processed 42 items in queue","service":"queue-worker","queue":"email-outbox","worker_id":"w-7"}
+{"timestamp":"2024-03-15T10:00:05.210Z","level":"info","msg":"processed 99 items in queue","service":"queue-worker","queue":"email-outbox","worker_id":"w-7"}
+{"timestamp":"2024-03-15T10:00:06.000Z","level":"error","msg":"upstream timeout","service":"inventory-service","upstream":"warehouse-api","request_id":"req-xyz-456","hier_path":"inventory.stock.check","timeout_ms":3000}
+{"timestamp":"2024-03-15T10:00:06.100Z","level":"error","msg":"retrying upstream call","service":"inventory-service","upstream":"warehouse-api","attempt":1,"max_attempts":3,"hier_path":"inventory.stock.check"}
+{"timestamp":"2024-03-15T10:00:06.500Z","level":"error","msg":"retrying upstream call","service":"inventory-service","upstream":"warehouse-api","attempt":2,"max_attempts":3,"hier_path":"inventory.stock.check"}
+{"timestamp":"2024-03-15T10:00:07.000Z","level":"fatal","msg":"all retries exhausted, circuit breaker opened","service":"inventory-service","upstream":"warehouse-api","hier_path":"inventory.circuit_breaker","tripped":true}
+{"timestamp":"2024-03-15T10:00:07.500Z","level":"warn","msg":"cache miss, fetching from origin","service":"cdn-service","asset":"/static/app.js","cache_key":"sha256:abc123","hier_path":"cdn.cache.miss"}
+{"timestamp":"2024-03-15T10:00:08.000Z","level":"info","msg":"user authenticated","service":"auth-service","user_id":"usr-9988","method":"oauth2","provider":"google","hier_path":"auth.session.create"}
+{"timestamp":"2024-03-15T10:00:08.500Z","level":"debug","msg":"JWT token issued","service":"auth-service","user_id":"usr-9988","ttl_seconds":3600,"hier_path":"auth.token.issue"}
+{"timestamp":"2024-03-15T10:00:09.000Z","level":"info","msg":"health check passed","service":"api-gateway","db_status":"ok","cache_status":"ok","queue_status":"ok"}

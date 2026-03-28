@@ -1,0 +1,26 @@
+# binaries
+bin/
+dist/
+
+# go
+*.test
+*.out
+vendor/
+
+# goreleaser
+dist/
+
+# generated demo artifacts (regenerate with: vhs demo.tape)
+demo.gif
+
+# macOS
+.DS_Store
+
+# editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# license cache (user-specific, not committed)
+~/.logr/
