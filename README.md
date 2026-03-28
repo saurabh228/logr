@@ -373,7 +373,7 @@ logr works with any JSON logging library out of the box:
 
 Copyright (c) 2026 Saurabh Saini. All rights reserved.
 
-Source code is provided for reference and audit purposes only. Commercial use requires a valid license purchased at [bearking11.gumroad.com](https://bearking11.gumroad.com/). See [LICENSE](./LICENSE) for full terms.
+Source code is provided for reference and audit purposes only. Commercial use requires a valid license purchased at [bearking11.gumroad.com/l/logr](https://bearking11.gumroad.com/l/logr). See [LICENSE](./LICENSE) for full terms.
 
 ---
 
