@@ -27,19 +27,19 @@ Every existing tool (`hl`, `humanlog`, `klp`, `lnav`) pretty-prints JSON logs. N
 
 ## Installation
 
-Download the binary for your platform from the [releases page](https://github.com/saurabh/logr/releases) and put it on your `PATH`:
+Download the binary for your platform from the releases page and put it on your `PATH`:
 
 ```bash
 # macOS (Apple Silicon)
-curl -L https://github.com/saurabh/logr/releases/latest/download/logr_darwin_arm64.tar.gz | tar xz
+tar xz logr_darwin_arm64.tar.gz
 sudo mv logr /usr/local/bin/
 
 # macOS (Intel)
-curl -L https://github.com/saurabh/logr/releases/latest/download/logr_darwin_amd64.tar.gz | tar xz
+tar xz logr_darwin_amd64.tar.gz
 sudo mv logr /usr/local/bin/
 
 # Linux (amd64)
-curl -L https://github.com/saurabh/logr/releases/latest/download/logr_linux_amd64.tar.gz | tar xz
+tar xz logr_linux_amd64.tar.gz
 sudo mv logr /usr/local/bin/
 ```
 
@@ -369,12 +369,20 @@ logr works with any JSON logging library out of the box:
 
 ---
 
+## License
+
+Copyright (c) 2026 Saurabh Saini. All rights reserved.
+
+Source code is provided for reference and audit purposes only. Commercial use requires a valid license purchased at [bearking11.gumroad.com](https://bearking11.gumroad.com/). See [LICENSE](./LICENSE) for full terms.
+
+---
+
 ## Build from source
 
 Requires Go 1.22+.
 
 ```bash
-git clone https://github.com/saurabh/logr
+git clone <repo-url>
 cd logr
 go build -o logr .
 ```
