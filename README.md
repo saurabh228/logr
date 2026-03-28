@@ -382,7 +382,7 @@ Source code is provided for reference and audit purposes only. Commercial use re
 Requires Go 1.22+.
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/saurabh228/logr
 cd logr
 go build -o logr .
 ```
