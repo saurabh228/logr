@@ -27,7 +27,7 @@ Every existing tool (`hl`, `humanlog`, `klp`, `lnav`) pretty-prints JSON logs. N
 
 ## Installation
 
-Purchase and download your platform's binary from [bearking11.gumroad.com/l/logr](https://bearking11.gumroad.com/l/logr), then:
+Download your platform's binary from [bearking11.gumroad.com/l/logr](https://bearking11.gumroad.com/l/logr), then:
 
 ```bash
 # macOS (Apple Silicon)
