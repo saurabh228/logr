@@ -27,20 +27,22 @@ Every existing tool (`hl`, `humanlog`, `klp`, `lnav`) pretty-prints JSON logs. N
 
 ## Installation
 
-Download the binary for your platform from the releases page and put it on your `PATH`:
+Purchase and download your platform's binary from [bearking11.gumroad.com/l/logr](https://bearking11.gumroad.com/l/logr), then:
 
 ```bash
 # macOS (Apple Silicon)
-tar xz logr_darwin_arm64.tar.gz
-sudo mv logr /usr/local/bin/
+tar xz logr_macos_arm64.tar.gz && sudo mv logr /usr/local/bin/
 
 # macOS (Intel)
-tar xz logr_darwin_amd64.tar.gz
-sudo mv logr /usr/local/bin/
+tar xz logr_macos_amd64.tar.gz && sudo mv logr /usr/local/bin/
 
 # Linux (amd64)
-tar xz logr_linux_amd64.tar.gz
-sudo mv logr /usr/local/bin/
+tar xz logr_linux_amd64.tar.gz && sudo mv logr /usr/local/bin/
+
+# Linux (arm64)
+tar xz logr_linux_arm64.tar.gz && sudo mv logr /usr/local/bin/
+
+# Windows — unzip logr_windows_amd64.zip and add logr.exe to your PATH
 ```
 
 ### License
